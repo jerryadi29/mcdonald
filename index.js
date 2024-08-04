@@ -1,16 +1,3 @@
-/*function showSidebar() {
-  const sidebar = document.querySelector(".sidebar");
-  const burgerIcon = document.getElementById("burger-icon");
-  const closeIcon = document.getElementById("close-icon");
-
-  sidebar.style.display = "flex";
-}
-
-function hideSidebar(){
-  const sidebar = document.querySelector(".sidebar");
-  sidebar.style.display = "none";
-}
-  */
 
 function toggleSidebar() {
   const sidebar = document.querySelector('.sidebar');
@@ -33,3 +20,37 @@ function handleScroll() {
 
 window.addEventListener('scroll', handleScroll);
   
+
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+const images = document.querySelectorAll('.image-gallary .image-slide');
+
+const totalImages = images.length;
+let index = 0;
+
+prev.addEventListener('click', () => {
+    nextImage('prev');
+});
+
+next.addEventListener('click', () => {
+    nextImage('next');
+});
+
+function nextImage(direction) {
+    if (direction === 'next') {
+        index++;
+        if (index >= totalImages) {
+            index = 0;
+        }
+    } else {
+        if (index <= 0) {
+            index = totalImages - 1;
+        } else {
+            index--;
+        }
+    }
+
+    images.forEach(img => img.classList.remove('main-slide'));
+    images[index].classList.add('main-slide');
+}
