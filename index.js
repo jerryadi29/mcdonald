@@ -54,3 +54,34 @@ function nextImage(direction) {
     images.forEach(img => img.classList.remove('main-slide'));
     images[index].classList.add('main-slide');
 }
+
+
+const texts  = document.querySelectorAll('.text-slide');
+
+const totalTexts = texts.length;
+
+prev.addEventListener('click', () => {
+    nextText('prev');
+});
+
+next.addEventListener('click', () => {
+    nextText('next');
+});
+
+function nextText(direction) {
+    if (direction === 'next') {
+        index++;
+        if (index >= totalTexts) {
+            index = 0;
+        }
+    } else {
+        if (index <= 0) {
+            index = totalTexts - 1;
+        } else {
+            index--;
+        }
+    }
+
+    texts.forEach(text => text.classList.remove('main-slide'));
+    texts[index].classList.add('main-slide');
+}
