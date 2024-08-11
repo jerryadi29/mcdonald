@@ -6,8 +6,14 @@
 }
 
 body{
-  min-height: 100vh;
   height: 3000vh;
+}
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  
 }
 
 
@@ -45,8 +51,9 @@ body{
 .image-gallary{
   flex: 2;
   overflow: hidden;
-  height: auto;
-  max-height: 100%;
+  height: 100%;
+  width:100%;
+  /*max-height: 100%;*/
   object-fit: contain;
   position: relative;
   transition: all 0.3s ease;
@@ -62,11 +69,12 @@ body{
   font-weight: 700;
 }
 .navigation .next {
-  right: 50px;
   position: absolute;
   font-size: 2rem;
   z-index: 8;
   top: 80%;
+  right: 50px;
+  font-weight: 700;
 }
 .navigation .nav-btn {
   background: rgba(255, 255, 255, 0.55);
@@ -77,11 +85,13 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 1.5rem;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
+
 .navigation .nav-btn:hover {
   background: white;
+  transition: all 0.3s ease;
 }
 
 
@@ -159,9 +169,6 @@ body{
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#navbar.scrolled #logo{
-  content: url('https://mcdindia.com/wp-content/uploads/2020/01/m-logo-big.svg');
-}
 
 
 .sidebar{
@@ -177,7 +184,9 @@ body{
   justify-content: flex-start;
   align-items: flex-start;
   border: 1px solid #ddd;
- 
+  transform: translateX(100%);
+  opacity: 0; 
+  transition: opacity 0.3s ease, transform 0.8s ease 0.2s;
 }
 
 .sidebar li{
@@ -200,6 +209,12 @@ body{
 
 .sidebar li:last-child{
   border-bottom: none;
+}
+
+.sidebar.show {
+  display: flex; 
+  transform: translateX(0); 
+  opacity: 1; 
 }
 
 .menu-button{
@@ -236,3 +251,106 @@ body{
   
 }
 
+
+
+.second-main-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.second-main-top-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.second-left-container{
+  margin-top: 5rem;
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2rem;
+}
+
+.second-right-container{
+  flex: 1;
+  position: relative;
+}
+
+#second-navbar{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+}
+
+#second-navbar li{
+  list-style-type: none;
+}
+
+#second-navbar a{
+  text-decoration: none;
+}
+
+.food-info{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.food-info .ingredients{
+  max-width: 440px;
+}
+
+
+
+
+.nutrients{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+  border: 2px solid red;
+  border-radius: 10%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+
+
+.nutrients-first-row,
+.nutrients-second-row{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nutrients-first-row li,
+.nutrients-second-row li{
+  list-style-type: none;
+}
+
+.nutrients-first-row a,
+.nutrients-second-row a{
+  text-decoration: none;
+  cursor: none;
+}
+
+
+
+.second-right-container div{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://mcdindia.com/wp-content/uploads/2023/01/veg-surprise-burger-1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  top: 15%;
+  left: -15%;
+}

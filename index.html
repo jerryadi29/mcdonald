@@ -14,109 +14,229 @@
     />
   </head>
   <body>
-    <header id="header">
-      <main id="main-container">
-        <div class="image-slider">
-          <div class="text-slide main-slide">
-            <h1>
-              McDeal <br />
-              Chicken <br />
-              Surprise Meal
-            </h1>
-          </div>
-          <div class="text-slide">
-            <h1>
-              McDeal <br />
-              Value @99
-            </h1>
-          </div>
-          <div class="text-slide">
-            <h1>
-              New <br />
-              Kebab Rolls
-            </h1>
-          </div>
+    <div class="container">
+      <header id="header">
+        <main id="main-container">
+          <div class="image-slider">
+            <div class="text-slide main-slide">
+              <h1>
+                McDeal <br />
+                Chicken <br />
+                Surprise Meal
+              </h1>
+            </div>
+            <div class="text-slide">
+              <h1>
+                McDeal <br />
+                Value @99
+              </h1>
+            </div>
+            <div class="text-slide">
+              <h1>
+                New <br />
+                Kebab Rolls
+              </h1>
+            </div>
 
-          <div class="navigation">
-            <div class="prev nav-btn"><</div>
-            <div class="next nav-btn">></div>
+            <div class="navigation">
+              <div class="prev nav-btn">&lt;</div>
+              <div class="next nav-btn">&gt;</div>
+            </div>
           </div>
+          <div class="image-gallary">
+            <div class="image-slide main-slide">
+              <img
+                src="https://mcdindia.com/wp-content/uploads/2024/06/mcdeal.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="image-slide">
+              <img
+                src="https://mcdindia.com/wp-content/uploads/2024/04/value99-1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="image-slide">
+              <img
+                src="https://mcdindia.com/wp-content/uploads/2024/01/kebab_rolls.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </main>
+
+        <nav id="navbar">
+          <ul class="sidebar">
+            <li><a href="" class="">Menu</a></li>
+            <li><a href="" class="">Happy Meal</a></li>
+            <li><a href="" class="">Restaurants</a></li>
+            <li><a href="" class="">McDelivery</a></li>
+            <li><a href="" class="">News</a></li>
+            <li><a href="" class="">Birthday Party</a></li>
+          </ul>
+
+          <ul>
+            <li>
+              <a href="" class="">
+                <img
+                  src="https://mcdindia.com/wp-content/uploads/2020/01/m-logo-big.svg"
+                  alt="logo"
+                  id="logo"
+                  class=""
+                />
+              </a>
+            </li>
+            <li class="hideOnMobile"><a href="" class="">Menu</a></li>
+            <li class="hideOnMobile"><a href="" class="">Happy Meal</a></li>
+            <li class="hideOnMobile"><a href="" class="">Restaurants</a></li>
+            <li class="hideOnMobile"><a href="" class="">McDelivery</a></li>
+            <li class="hideOnMobile"><a href="" class="">News</a></li>
+            <li class="hideOnMobile"><a href="" class="">Birthday Party</a></li>
+
+            <li
+              class="menu-button"
+              class="menu-button"
+              onclick="toggleSidebar()"
+            >
+              <a href="#">
+                <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                <svg
+                  height="32px"
+                  id="burger-icon"
+                  style="enable-background: new 0 0 32 32"
+                  version="1.1"
+                  viewBox="0 0 32 32"
+                  width="32px"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <path
+                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="second-main-container">
+        <div class="second-main-top-container">
+          <section class="second-left-container">
+            <nav class="">
+              <ul id="second-navbar">
+                <li class="">
+                  <a href="" class="">Burgers and wraps</a>
+                </li>
+                <li class=""><span>|</span></li>
+                <li class="">
+                  <a href="" class="">Snacks and sides</a>
+                </li>
+                <li class=""><span>|</span></li>
+                <li class="">
+                  <a href="" class="">Desserts</a>
+                </li>
+                <li class=""><span>|</span></li>
+                <li class="">
+                  <a href="" class="">Beverages</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="food-info">
+              <h1>Veg Surprise Burger</h1>
+              <h2>A surprise that will leave you wide-eyed.</h2>
+              <p class="ingredients">
+                A scrumptious potato patty topped with a delectable Italian herb
+                sauce and shredded onions placed between perfectly toasted buns
+              </p>
+              <p>Serving Size: 132g</p>
+              <p>
+                Allergen Warning! Contains:
+                <br />
+                Cereal containing gluten, Milk, Soya
+              </p>
+
+              <div class="nutrients">
+                <ul class="nutrients-first-row">
+                  <li class="">
+                    <a href="" class="">Energy</a>
+                    <br />
+                    <a href="" class="">313.44kcal</a>
+                  </li>
+                  <li class=""><span>|</span></li>
+                  <li class="">
+                    <a href="" class="">Protein</a>
+                    <br />
+                    <a href="" class="">5.71g</a>
+                  </li>
+                  <li class=""><span>|</span></li>
+                  <li class="">
+                    <a href="" class="">Total Fat</a>
+                    <br />
+                    <a href="" class="">Total Fat</a>
+                  </li>
+                  <li class=""><span>|</span></li>
+                  <li class="">
+                    <a href="" class="">Sat Fat</a>
+                    <br />
+                    <a href="" class="">3.73g</a>
+                  </li>
+                  <li class=""><span>|</span></li>
+                  <li class="">
+                    <a href="" class="">Trans Fat</a>
+                    <br />
+                    <a href="" class="">3.73g</a>
+                  </li>
+                </ul>
+                <ul class="nutrients-second-row">
+                  <li class="">
+                    <a href="" class="">Energy</a>
+                    <br />
+                    <a href="" class="">313.44kcal</a>
+                  </li>
+                  <li class=""><span>|</span></li>
+                  <li class="">
+                    <a href="" class="">Protein</a>
+                    <br />
+                    <a href="" class="">5.71g</a>
+                  </li>
+                  <li class=""><span>|</span></li>
+                  <li class="">
+                    <a href="" class="">Total Fat</a>
+                    <br />
+                    <a href="" class="">Total Fat</a>
+                  </li>
+                  <li class=""><span>|</span></li>
+                  <li class="">
+                    <a href="" class="">Sat Fat</a>
+                    <br />
+                    <a href="" class="">3.73g</a>
+                  </li>
+                  <li class=""><span>|</span></li>
+                  <li class="">
+                    <a href="" class="">Trans Fat</a>
+                    <br />
+                    <a href="" class="">3.73g</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="second-right-container">
+            <div></div>
+          </section>
         </div>
-        <div class="image-gallary">
-          <div class="image-slide main-slide">
-            <img
-              src="https://mcdindia.com/wp-content/uploads/2024/06/mcdeal.jpg"
-              alt=""
-            />
-          </div>
 
-          <div class="image-slide">
-            <img
-              src="https://mcdindia.com/wp-content/uploads/2024/04/value99-1.jpg"
-              alt=""
-            />
-          </div>
-
-          <div class="image-slide">
-            <img
-              src="https://mcdindia.com/wp-content/uploads/2024/01/kebab_rolls.jpg"
-              alt=""
-            />
-          </div>
+        <div>
+          <footer class="second-bottom-container"></footer>
         </div>
       </main>
-
-      <nav id="navbar">
-        <ul class="sidebar">
-          <li><a href="" class="">Menu</a></li>
-          <li><a href="" class="">Happy Meal</a></li>
-          <li><a href="" class="">Restaurants</a></li>
-          <li><a href="" class="">McDelivery</a></li>
-          <li><a href="" class="">News</a></li>
-          <li><a href="" class="">Birthday Party</a></li>
-        </ul>
-
-        <ul>
-          <li>
-            <a href="" class="">
-              <img
-                src="https://mcdindia.com/wp-content/uploads/2020/04/logo-symbol.svg"
-                alt="logo"
-                id="logo"
-                class=""
-              />
-            </a>
-          </li>
-          <li class="hideOnMobile"><a href="" class="">Menu</a></li>
-          <li class="hideOnMobile"><a href="" class="">Happy Meal</a></li>
-          <li class="hideOnMobile"><a href="" class="">Restaurants</a></li>
-          <li class="hideOnMobile"><a href="" class="">McDelivery</a></li>
-          <li class="hideOnMobile"><a href="" class="">News</a></li>
-          <li class="hideOnMobile"><a href="" class="">Birthday Party</a></li>
-
-          <li class="menu-button" class="menu-button" onclick="toggleSidebar()">
-            <a href="#">
-              <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-              <svg
-                height="32px"
-                id="burger-icon"
-                style="enable-background: new 0 0 32 32"
-                version="1.1"
-                viewBox="0 0 32 32"
-                width="32px"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              >
-                <path
-                  d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    </div>
 
     <script src="index.js"></script>
   </body>
