@@ -3,13 +3,6 @@ function toggleSidebar() {
   const sidebar = document.querySelector('.sidebar');
   sidebar.classList.toggle('show');
   sidebar.style.display = sidebar.classList.contains('show') ? 'flex' : 'none';
-  /*
-  if (sidebar.style.display === 'flex') {
-      sidebar.style.display = 'none';
-  } else {
-      sidebar.style.display = 'flex';
-  }
-      */
 }
 
 
@@ -100,3 +93,39 @@ function nextText(direction) {
     texts.forEach(text => text.classList.remove('main-slide'));
     texts[index].classList.add('main-slide');
 }
+
+//
+document.addEventListener('DOMContentLoaded', () => {
+    const navlinks = document.querySelectorAll('#second-navbar a');
+    const foodInfoSections = document.querySelectorAll('.food-info');
+    const sections = document.querySelectorAll('.second-right-container')
+
+
+    navlinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const targetId = link.getAttribute('data-target');
+
+            foodInfoSections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            const targetFoodSection = document.getElementById(targetId);
+            if (targetFoodSection) {
+                targetFoodSection.style.display = 'flex';
+            }
+
+            
+            const targetRightSection = document.querySelector(`#${targetId}.second-right-container`);
+            if (targetRightSection) {
+                targetRightSection.style.display = 'block';
+            }
+        })
+    })
+
+})

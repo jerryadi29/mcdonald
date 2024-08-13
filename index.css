@@ -6,7 +6,8 @@
 }
 
 body{
-  height: 3000vh;
+  height: 100vh;
+  width: 100vw;
 }
 
 
@@ -263,6 +264,8 @@ body{
 .second-main-top-container{
   display: flex;
   flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
 
 .second-left-container{
@@ -274,10 +277,7 @@ body{
   gap: 2rem;
 }
 
-.second-right-container{
-  flex: 1;
-  position: relative;
-}
+
 
 #second-navbar{
   display: flex;
@@ -311,11 +311,15 @@ body{
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 2rem;
+  gap: 1.3rem;
   border: 2px solid red;
   border-radius: 10%;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: red;
+  color: white;
+  z-index: 3;
+  
 }
 
 
@@ -324,9 +328,11 @@ body{
 .nutrients-second-row{
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
   justify-content: center;
+  z-index: 3;
+  
 }
 
 .nutrients-first-row li,
@@ -338,19 +344,52 @@ body{
 .nutrients-second-row a{
   text-decoration: none;
   cursor: none;
+  color: white;
 }
 
 
-
-.second-right-container div{
+.background-product-image{
   position: absolute;
-  height: 100%;
   width: 100%;
-  background-image: url("https://mcdindia.com/wp-content/uploads/2023/01/veg-surprise-burger-1.png");
+  height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: top;
   top: 15%;
-  left: -15%;
+  left:-15%;
+  z-index: 2;
 }
+
+.second-right-container{
+  flex: 1;
+  position: relative;
+  
+}
+
+.ingredients-image p{
+  max-width: 170px;
+  padding: 1rem;
+  border: 2px solid red;
+  position: absolute;
+  top: 40%;
+  right: 4%;
+  background-color: transparent;
+  z-index: 3;
+  
+
+}
+
+
+.mcdonald-logo-onpage-div{
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background-image: url("https://mcdindia.com/wp-content/uploads/2020/01/m-logo-big.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: -10%;
+  right:-10%;
+ 
+}
+
