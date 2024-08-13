@@ -94,7 +94,7 @@ function nextText(direction) {
     texts[index].classList.add('main-slide');
 }
 
-//
+//click event for navlinks of second page 
 document.addEventListener('DOMContentLoaded', () => {
     const navlinks = document.querySelectorAll('#second-navbar a');
     const foodInfoSections = document.querySelectorAll('.food-info');
