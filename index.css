@@ -311,11 +311,11 @@ body{
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 1.3rem;
+  gap: 1rem;
   border: 2px solid red;
   border-radius: 10%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   background-color: red;
   color: white;
   z-index: 3;
@@ -328,7 +328,7 @@ body{
 .nutrients-second-row{
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 1.8rem;
   align-items: center;
   justify-content: center;
   z-index: 3;
@@ -340,13 +340,10 @@ body{
   list-style-type: none;
 }
 
-.nutrients-first-row a,
-.nutrients-second-row a{
-  text-decoration: none;
-  cursor: none;
-  color: white;
+.nutrients-first-row li p,
+.nutrients-second-row li p{
+  line-height: 1.6rem;
 }
-
 
 .background-product-image{
   position: absolute;
