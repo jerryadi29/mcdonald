@@ -322,37 +322,59 @@
                 <br />
                 Cereal containing gluten, Milk, Soya
               </p>
+              <div class="slide-choose-meal-size">
+                <h2>Change your size</h2>
+                <div class="size-options">
+                  <div class="regular active" onclick="dessertSizeChoose('regular')">
+                    <h2>R</h2>
+                    <span>Regular</span>
+                  </div>
+                  <div class="medium" onclick="dessertSizeChoose('medium')">
+                    <h2>M</h2>
+                    <span>Medium</span>
+                  </div>
+                </div>
 
               <div class="nutrients">
-                <ul class="nutrients-first-row">
+                <ul class="nutrients-first-row" id="dessert-nutrients">
                   <li class="">
-                    <p>Energy</p>
-
-                    <p>100.44kcal</p>
+                    <p href="" class="">Energy</p>
+                    <br />
+                    <p class="energy-regular active">100.44kcal</p>
+                    <p class="energy-medium ">209.39kCal</p>
                   </li>
                   <li class=""><span>|</span></li>
                   <li class="">
-                    <p>Protein</p>
-
-                    <p>8.71g</p>
+                    <p href="" >Protein</p>
+                    <br />
+                    <p  class="protein-regular active">8.71g</p>
+                    <p class="protein-medium">10.39g</p>
                   </li>
                   <li class=""><span>|</span></li>
                   <li class="">
-                    <p>Total Fat</p>
+                    <p class="">Total Fat</p>
+                    <br />
+                    <p class="fat-regular active">3.70</p>
+                    <p class="fat-medium">6.81</p>
 
-                    <p>45.88</p>
                   </li>
                   <li class=""><span>|</span></li>
                   <li class="">
-                    <p>Sat Fat</p>
+                    <p class="">Sat Fat</p>
+                    <br />
+                    <p class="sat-fat-regular active">2.25g</p>
+                    <p class="sat-fat-medium">4.07g</p>
 
-                    <p>3.73g</p>
                   </li>
                   <li class=""><span>|</span></li>
                   <li class="">
                     <p>Trans Fat</p>
 
-                    <p>3.73g</p>
+                    <br />
+
+                    <p class="trans-fat-regular active">3.73g</p>
+                    <p  class="trans-fat-medium">4.90g</a>
+
                   </li>
                 </ul>
                 <ul class="nutrients-second-row">
