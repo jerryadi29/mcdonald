@@ -345,6 +345,63 @@ body{
   line-height: 1.6rem;
 }
 
+.size-options{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+.regular>h2{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFBC0D;
+  color: #000;
+  border-radius: 50%;
+}
+
+.medium>h2{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  border: 0.7px solid #000;
+  border-radius: 50%;
+}
+ 
+#dessert-nutrients .active{
+  display: none;
+}
+
+.nutrients-first-row :nth-child(1) {
+  display: block;
+}
+
+
+/* Active classes for nutrient info */
+.energy-regular.active,
+.protein-regular.active,
+.fat-regular.active,
+.sat-fat-regular.active {
+  display: block;
+}
+
+.energy-medium.active,
+.protein-medium.active,
+.fat-medium.active,
+.sat-fat-medium.active {
+  display: block;
+}
+
+
 .background-product-image{
   position: absolute;
   width: 100%;

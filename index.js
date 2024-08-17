@@ -100,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const foodInfoSections = document.querySelectorAll('.food-info');
     const sections = document.querySelectorAll('.second-right-container')
 
-
     navlinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -129,3 +128,24 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 })
+
+// OnClick choose the size of the dessert and display acc.
+const dessertSizeChoose = (size) => {
+
+   // Remove 'active' class from all size buttons
+   document.querySelectorAll('.size-options div').forEach(button => button.classList.remove('active'));
+
+   // Add 'active' class to the clicked size button
+   if (size === 'regular') {
+     document.querySelector('.regular').classList.add('active');
+     document.querySelectorAll('.nutrients-first-row a, .nutrients-first-row p').forEach(el => el.classList.remove('active'));
+     document.querySelectorAll('.energy-regular, .protein-regular, .fat-regular, .sat-fat-regular', 'trans-fat-regular').forEach(el => el.classList.add('active'));
+     document.querySelectorAll('.energy-medium, .protein-medium, .fat-medium, .sat-fat-medium','trans-fat-medium').forEach(el => el.classList.remove('active'));
+   } else if (size === 'medium') {
+     document.querySelector('.medium').classList.add('active');
+     document.querySelectorAll('.nutrients-first-row a, .nutrients-first-row p').forEach(el => el.classList.remove('active'));
+     document.querySelectorAll('.energy-medium, .protein-medium, .fat-medium, .sat-fat-medium', 'trans-fat-medium').forEach(el => el.classList.add('active'));
+     document.querySelectorAll('.energy-regular, .protein-regular, .fat-regular, .sat-fat-regular', 'trans-fat-regular').forEach(el => el.classList.remove('active'));
+   }
+
+}
